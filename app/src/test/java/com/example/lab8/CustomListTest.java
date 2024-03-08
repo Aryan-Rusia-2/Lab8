@@ -58,9 +58,9 @@ public class CustomListTest {
 
     @Test
     public void testCountCities() {
-        // Initially, the list should be empty.
-        assertEquals(0, list.countCity(), "List should be empty initially.");
+        list = MockCityList();
 
+        assertEquals(0, list.countCity(), "List should be empty initially.");
         // Add a city and verify countCity reflects the correct count.
         list.addCity(new City("Estevan", "SK"));
         assertEquals(1, list.countCity(), "countCity should return 1 after adding a city.");
