@@ -47,6 +47,7 @@ public class CustomListTest {
 
     @Test
     public void testDelCity() {
+        list = MockCityList();
         City cityToAddAndRemove = new City("Moose Jaw", "SK");
         list.addCity(cityToAddAndRemove);
         assertTrue(list.hasCity(cityToAddAndRemove));
