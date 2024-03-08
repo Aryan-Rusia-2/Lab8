@@ -11,11 +11,16 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class CustomList extends ArrayAdapter<City> {
 
     private ArrayList<City> cities;
     private Context context;
+
+
+
+    // Assume getters, setters, and constructors are defined here
 
     public CustomList(Context context, ArrayList<City> cities) {
         super(context, 0, cities);
@@ -44,6 +49,7 @@ public class CustomList extends ArrayAdapter<City> {
         return view;
 
     }
+
 
     public int getCount(){
         return cities.size();
