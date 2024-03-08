@@ -45,4 +45,14 @@ public class CustomListTest {
 
     }
 
+    @Test
+    public void testDelCity() {
+        City cityToAddAndRemove = new City("Moose Jaw", "SK");
+        list.addCity(cityToAddAndRemove);
+        assertTrue(list.hasCity(cityToAddAndRemove));
+
+        list.delCity(cityToAddAndRemove);
+        assertFalse(list.hasCity(cityToAddAndRemove));
+    }
+
 }
