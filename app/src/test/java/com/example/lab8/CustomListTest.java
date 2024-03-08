@@ -56,4 +56,21 @@ public class CustomListTest {
         assertFalse(list.hasCity(cityToAddAndRemove));
     }
 
+    @Test
+    public void testCountCities() {
+        // Initially, the list should be empty.
+        assertEquals(0, list.countCity(), "List should be empty initially.");
+
+        // Add a city and verify countCity reflects the correct count.
+        list.addCity(new City("Estevan", "SK"));
+        assertEquals(1, list.countCity(), "countCity should return 1 after adding a city.");
+
+        // Add another city and verify countCity.
+        list.addCity(new City("Regina", "SK"));
+        assertEquals(2, list.countCity(), "countCity should return 2 after adding another city.");
+
+        // Delete a city and verify countCity reflects the correct count.
+        list.delCity(new City("Estevan", "SK"));
+        assertEquals(1, list.countCity(), "countCity should return 1 after deleting a city.");
+    }
 }
